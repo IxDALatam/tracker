@@ -44,40 +44,18 @@ const Card = ({Icon, title, description}) => {
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div style={{
-      padding: 10,
-      display: 'grid',
-      gridTemplateColumns: '100%',
-      gridGap: '20px',
-      gridRowGap: '20px'
-    }}>
-      <section style={{
-        display: 'inline-grid',
-        gridTemplateColumns: '960px 2fr',
-        gridTemplateRows: '60vh',
-        gridRowGap: '10px',
-        gridGap: '20px'
-      }}>
+    <div className='home-container'>
+      <section className='first-row '>
         <MiniMap />
         <ChapterSearch />
       </section> 
-      <section style={{
-        display: 'inline-grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        gridTemplateRows: '25vh',
-        gridGap: '10px'
-      }}>
+      <section className='second-row'>
         <Card Icon={Pin} title="200" description="Local groups around the globe" />
         <Card Icon={People} title="100.000" description="Active members" />
         <Card Icon={Pin} title="200" description="Local groups around the globe" />
         <Card Icon={People} title="100.000" description="Active members" />    
       </section> 
-      <section style={{
-        display: 'inline-grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gridTemplateRows: '30vh',
-        gridGap: '10px'
-      }}>
+      <section className='third-row'>
         <section className='informative-card'>
           <p>
           The Interaction Design Association (IxDA) is a member-supported organization dedicated to the discipline of interaction design. Since its launch in 2003, IxDA has grown into a global network of more than 100,000 individuals and over 200 local groups, focusing on interaction design issues for the practitioner, no matter their level of experience.

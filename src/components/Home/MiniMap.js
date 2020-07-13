@@ -1,13 +1,9 @@
 import React from 'react';
+import './mini-map.sass'
 
 export default function () {
   return (
-    <div style={{
-      background: '#c9c9c9',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center'
-    }}>
+    <div className='map-container'>
       <span
         style={{
           textDecoration: 'none',
