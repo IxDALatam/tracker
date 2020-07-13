@@ -58,11 +58,11 @@ const IxDAButton = ({ color, children, style }) => {
 const Header = ({ siteTitle, siteLocation, labels }) => (
   <header style={{
     background: 'white',
-    padding: '0.45rem',
+    padding: '0.45rem 0.45rem 0.45rem 0.45rem',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: '2rem'
+    marginBottom: '1rem'
   }}>
     <section style={{
       display: 'flex',
