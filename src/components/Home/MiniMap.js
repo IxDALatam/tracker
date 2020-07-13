@@ -1,20 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import 'ol/ol.css'
+import {Map, View} from 'ol'
+import { fromLonLat } from 'ol/proj'
+import TileLayer from 'ol/layer/Tile'
+import OSM from 'ol/source/OSM'
+
 import './mini-map.sass'
 
+/**
+ * API docs: 
+ * 
+ * https://openlayers.org/en/latest/apidoc/
+ * 
+ * https://openlayers.org/en/latest/doc/quickstart.html
+ */
+
 export default function () {
+  
+  useEffect(() => {
+    new Map({
+      target: 'map',
+      layers: [
+        new TileLayer({
+          source: new OSM()
+        })
+      ],
+      view: new View({
+        center: fromLonLat([-51.92528, -14.235004]),
+        zoom: 4
+      })
+    })
+  }, [])
+
   return (
-    <div className='map-container'>
-      <span
-        style={{
-          textDecoration: 'none',
-          color: '#FFFFFF',
-          fontFamily: 'Inter',
-          fontStyle: 'normal',
-          fontWeight: 'bold',
-          fontSize: '16px',
-          lineHeight: '100%',
-      }}
-      >Map not available</span>
+    <div id='map' className='map-container'>
+      
     </div>
   )
 }
